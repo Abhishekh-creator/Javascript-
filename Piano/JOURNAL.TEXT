@@ -20,4 +20,4 @@
 // NOTE_DETAILS.forEach() check the data-attribute in html is equal to note in NOTE_DETAILS.const keyElement = document.querySelector(`[data-note="${n.note}"]`);
 // keyElement.classList.toggle("active",n.active || false); it toggel active class if key is pressed same as in NOTE_DETAILS. If it is not then it will return.
 // const activeNotes = NOTE_DETAILS.filter(n => n.active) it will get properties have active notes.
-// activeNotes.forEach(n) then it play notes on every activeNotes using function startNote(n)
+// activeNotes.forEach(n) then it play notes on every activeNotes using function startNote(n).
