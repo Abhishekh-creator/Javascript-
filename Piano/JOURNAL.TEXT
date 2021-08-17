@@ -1,0 +1,23 @@
+
+// 1.It is array of object in when key is pressed like z , it will create a c note which have frequency of 261.626.
+
+// 2. document.addEventListener("keydown") and document.addEventListener("keyup") they are addEventListener for when key is pressed and when key is not pressed. Like to create a c tone press z and to stop it the key is released.
+
+// 3. console.log(e.code); tells us which key is clicked.
+
+// 4. auto-repeat = If a key is being pressed for a long enough time, it starts to “auto-repeat”: the keydown triggers again and again, and then when it’s released we finally get keyup. To prevent I used  if(e.repeat) return; so that whenever it repeats it returns also called as guard clause.
+
+// 5. function getNoteDetail() = If the key pressed in keyborad is equal to key in NOTE_DETAILS then only it will return otherwise undefined. Then, document.addEventListener("keydown", e => {if (e.repeat) return const keyboardKey = e.code const noteDetail = getNoteDetail(keyboardKey) console.log(noteDetail)});  in it the key is pressed in keyboard it finds that same key in NOTE_DETAILS and console.log() it or it returns undefined. 
+
+// 6. To prevent undefined if (noteDetail == null) return; is used . 
+
+// 7. noteDetail.active = true; it says the note is actively played.
+
+// 8. noteDetail.active = false; it says the note is actively not being played.
+
+// 9. function playNotes(); 
+// In css every key of piona has active class which color these keys whenever is pressed. 
+// NOTE_DETAILS.forEach() check the data-attribute in html is equal to note in NOTE_DETAILS.const keyElement = document.querySelector(`[data-note="${n.note}"]`);
+// keyElement.classList.toggle("active",n.active || false); it toggel active class if key is pressed same as in NOTE_DETAILS. If it is not then it will return.
+// const activeNotes = NOTE_DETAILS.filter(n => n.active) it will get properties have active notes.
+// activeNotes.forEach(n) then it play notes on every activeNotes using function startNote(n)
